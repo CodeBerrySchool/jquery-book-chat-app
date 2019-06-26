@@ -1,10 +1,14 @@
+$(document).ready(function(){
 
+    $('#hide').on('click', function() {
+        $('img').hide();
+    });
 
-
-
-$('#hide').on('click', function() {
-  $('img').hide();
 });
+
+
+
+
 
 
 //összekötni a jquery-t a html-el
