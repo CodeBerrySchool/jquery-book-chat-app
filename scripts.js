@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
 
-    $('#hide').on('click', function() {
+    $("#hide").on('click', function() {
         $('img').hide();
     });
 
@@ -22,12 +22,12 @@ $(document).ready(function(){
 
 // a logika a következő: klikkelésre az üzenet mezőben lévő szöveget jelenítse meg a legutolsó üzenet után
 //használt methodok: click, val, after
+//egyelőre csak külön ablakban jeleníti meg a bevitt üzenetet
 
 $(document).ready(function(){
     $('#sending').on('click', function() {
-      $('input').val(){
-        $('#user').after();
-      };     
+      var message = $('input').val();
+        alert(message); 
     });
 });
 
