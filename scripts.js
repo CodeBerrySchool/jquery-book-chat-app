@@ -27,13 +27,12 @@ $(document).ready(function(){
   //változóként deklaráltam az input mező tartalmát, hogy újrafelhasználható legyen.
 
 
+
 $(document).ready(function(){
     $('.send-button').on('click', function() {   
       var message = $('input').val();
-      //alert(message);
-      $('#user').after(message);
-      });
-                 
+        $('#user').after(message);
+      });           
 });
 
 //a feladat második részének logikája hasonló, csak ott nem klikkelésre, hanem az Enter leütésére fog megtörténni a bevitt üzenet megjelenítése
@@ -54,15 +53,21 @@ $(document).ready(function(){
 
 
 //Animáció: kattintásra eltűnik az oldalsáv
-//Ehhet létrehoztam a HTML-ben egy gombot, melyet jobbra úsztattam
-//Relatívra állítottam az oldalsó menü pozícióját
+//Ehhet létrehoztam a HTML-ben két gombot (hide és show)
+//Relatívra állítottam a chat menü pozícióját
 //Animáció: kattintásra a menü teljesen eltűnik
-//További terv: másik gomb, mely visszahozná az eltűnt menüt
+//A hide gomb hatására a chat window szélessége 100%-a a képernyőjének
+//A show gomb hatására a chat windw szélessége visszaáll az eredeti 75%-ra
+
 
 $(document).ready(function(){
+  $("#hide-the-sidebar").on('click', function() {
+    $(".chat-window").animate({width: '100vw'});
+  });
+});
 
-    $("#hide-the-sidebar").on('click', function() {
-        $(".sidebar").animate({right: '100%'});
-    });
-
+$(document).ready(function(){
+  $("#show-the-sidebar").on('click', function() {
+    $(".chat-window").animate({width: '75vw'});
+  });
 });
