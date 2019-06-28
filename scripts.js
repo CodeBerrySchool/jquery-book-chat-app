@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    $('#sending').on('click', function() {   
+    $('.send-button').on('click', function() {   
       var message = $('input').val();
       //alert(message);
       $('#user').after(message);
@@ -50,3 +50,19 @@ $(document).ready(function(){
 
 
 //A bevitt üzenet megjelenik, de nem marad meg. Egyelőre ennyire jutottam.
+
+
+
+//Animáció: kattintásra eltűnik az oldalsáv
+//Ehhet létrehoztam a HTML-ben egy gombot, melyet jobbra úsztattam
+//Relatívra állítottam az oldalsó menü pozícióját
+//Animáció: kattintásra a menü teljesen eltűnik
+//További terv: másik gomb, mely visszahozná az eltűnt menüt
+
+$(document).ready(function(){
+
+    $("#hide-the-sidebar").on('click', function() {
+        $(".sidebar").animate({right: '100%'});
+    });
+
+});

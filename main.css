@@ -21,6 +21,8 @@ form {
 
 .sidebar {
     background-color: aquamarine;
+    /* Általam (SG) írt kód*/
+    position: relative;
 }
 
 .chat-window {
@@ -84,4 +86,9 @@ form {
     box-shadow: none;
     border: none;
     font-size: 1rem;
+}
+
+/* Általam (SG) írt kód*/
+.right {
+    float: right;
 }
